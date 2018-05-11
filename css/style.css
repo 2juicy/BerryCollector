@@ -2,11 +2,14 @@
 	margin: 0;
 	padding: 0;
     }
+body{
+    background: black;
+}
 hr{
     display: block;
     height: 1px;
     border:0;
-    border-top: 1px solid #ccc; 
+    border-top: 1px solid #405275; 
     margin: 1em 0 1em 0;
     padding: 0;
     }
@@ -38,15 +41,15 @@ p:nth-child(even){
 }
 
 .container{
+    position: relative;
     max-width: 960px;
-    overflow: auto;
     }
 .column{
 	float: left;
     width: 50%;
     box-sizing: border-box;
    	padding: 20px;
-    border: 5px solid #405275;
+    border: 1px solid #405275;
     border-radius: 15px 25px 10px 15px;
     }
 .item{
@@ -78,12 +81,28 @@ p:nth-child(even){
     }
 #yourWins, #yourLoses{
     font-size: 32px;
+    color: #f99e1a;
 }
 
 #yourTotal {
     font-size: 36px;
     color: #f99e1a;
 }
+
+
+figure{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    overflow: hidden;
+    
+ 
+
+
+
+
+
 
 @media (max-width: 960px){
     .container{
