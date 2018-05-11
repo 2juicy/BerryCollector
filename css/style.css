@@ -2,9 +2,7 @@
 	margin: 0;
 	padding: 0;
     }
-body{
-    background: black;
-}
+
 hr{
     display: block;
     height: 1px;
@@ -14,7 +12,7 @@ hr{
     padding: 0;
     }
 h1{
-    color: #f99e1a;
+    color: #E30B5C;
     font-size: 52px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-transform: capitalize;
@@ -26,7 +24,7 @@ h1{
     text-align: center;
 }
 p{
-    color: #218ffe;
+    color: #E30B5C;
     font-size: 24px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-transform: capitalize;
@@ -35,9 +33,6 @@ p{
              0px 4px 1px rgba(0,0,0,0.5),
              4px 4px 5px rgba(0,0,0,0.7),
              0px 0px 7px rgba(0,0,0,0.4);
-}
-p:nth-child(even){
-    color: #f99e1a;
 }
 
 .container{
@@ -49,6 +44,7 @@ p:nth-child(even){
     width: 50%;
     box-sizing: border-box;
    	padding: 20px;
+    margin: 15px 0px 15px 0px;
     border: 1px solid #405275;
     border-radius: 15px 25px 10px 15px;
     }
@@ -57,8 +53,8 @@ p:nth-child(even){
     text-transform: capitalize;
     font-style: italic;
     display: inline-block;
-    color: #f99e1a;
-    margin: 0px 3px 0px 3px;
+    color: #E30B5C;
+    margin: 0px 2px 0px 2px;
     padding-right: 20px;
     box-shadow: 0px 3px 8px #43484c;
     font-size: 20px;
@@ -81,12 +77,12 @@ p:nth-child(even){
     }
 #yourWins, #yourLoses{
     font-size: 32px;
-    color: #f99e1a;
+    color: #E30B5C;
 }
 
 #yourTotal {
     font-size: 36px;
-    color: #f99e1a;
+    color: #E30B5C;
 }
 
 
@@ -96,15 +92,9 @@ figure{
     padding: 0;
     position: absolute;
     overflow: hidden;
-    
- 
+}
 
-
-
-
-
-
-@media (max-width: 960px){
+@media only screen and (max-width: 960px){
     .container{
         width: auto;
     }
