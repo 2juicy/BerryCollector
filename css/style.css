@@ -33,6 +33,7 @@ p{
              0px 4px 1px rgba(0,0,0,0.5),
              4px 4px 5px rgba(0,0,0,0.7),
              0px 0px 7px rgba(0,0,0,0.4);
+    text-align: center;
 }
 
 .container{
@@ -78,6 +79,10 @@ p{
 #yourWins, #yourLoses{
     font-size: 32px;
     color: #E30B5C;
+}
+
+#score{
+    font-size: 28px;
 }
 
 #yourTotal {
