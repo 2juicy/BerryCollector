@@ -12,7 +12,7 @@ hr{
     padding: 0;
     }
 h1{
-    color: #E30B5C;
+    color: #fc5a8d;
     font-size: 52px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-transform: capitalize;
@@ -52,6 +52,12 @@ p{
 .column:nth-child(even){
     border-radius: 25px 10px 15px 25px;
 }
+.column > button:nth-child(even){
+    color: #fc5a8d;
+}
+#strawberry{
+    color: #fc5a8d;
+}
 .item{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-transform: capitalize;
@@ -63,7 +69,7 @@ p{
     box-shadow: 0px 3px 8px #43484c;
     font-size: 20px;
     padding: 20px 20px;
-    border-radius: 15px 15px 15px 5px;
+    border-radius: 15px 5px 15px 5px;
     transition: background linear 0.33s;
     background: linear-gradient(#218ffe, #405275);
     text-shadow: -1px -1px 1px #aaa,
@@ -72,7 +78,7 @@ p{
              0px 0px 7px rgba(0,0,0,0.4);
     }
 .item:nth-child(even){
-    border-radius: 15px 15px 5px 15px;
+    border-radius: 5px 15px 5px 15px;
 }
 .item:hover{
     background: white;
@@ -89,6 +95,7 @@ p{
 
 #score{
     font-size: 28px;
+    color: #fc5a8d;
 }
 
 #yourTotal, #yourNum, #winOrLose {
