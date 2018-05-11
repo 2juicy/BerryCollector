@@ -13,28 +13,31 @@ var userPick = 0;
 randomArr.push(random0, random1, random2, random3);
 console.log(randomArr);
 document.getElementById("yourNum").innerHTML = "#: " + randomNum;
+
+//Reset game and randomize number.
 function randomizeNum(){
-    randomNum = ((Math.floor(Math.random() * 26) + 50));
+    randomNum = ((Math.floor(Math.random() * 101) + 19));
     randomArr = [];
-    random0 = (Math.floor(Math.random() * 10) +1);
-    random1 = (Math.floor(Math.random() * 10) +1);
-    random2 = (Math.floor(Math.random() * 10) +1);
-    random3 = (Math.floor(Math.random() * 10) +1);
+    random0 = (Math.floor(Math.random() * 12) +1);
+    random1 = (Math.floor(Math.random() * 12) +1);
+    random2 = (Math.floor(Math.random() * 12) +1);
+    random3 = (Math.floor(Math.random() * 12) +1);
     randomArr.push(random0, random1, random2, random3);
     console.log(randomArr);
     document.getElementById("yourNum").innerHTML = "#: " + randomNum;
     totalScore = 0;
 }
+//Checks score for win condition.
 function scoreTrack(){
     totalScore = (randomArr[userPick] + totalScore);
     if (totalScore > randomNum){
         loses++;
-        randomizeNum();        
+        randomizeNum();  
+        $("#winOrLose").text('You Lose!');     
     } else if (totalScore == randomNum){
         wins++;
-        randomizeNum();        
-    } else {
-        return;
+        randomizeNum(); 
+        $("#winOrLose").text('You Win!');    
     }
 }
 //Document check
