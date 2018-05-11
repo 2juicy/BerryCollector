@@ -7,7 +7,7 @@ hr{
     display: block;
     height: 1px;
     border:0;
-    border-top: 1px solid #405275; 
+    border-top: 1px solid #312581; 
     margin: 1em 0 1em 0;
     padding: 0;
     }
@@ -45,7 +45,7 @@ p{
     box-sizing: border-box;
    	padding: 20px;
     margin: 15px 0px 15px 0px;
-    border: 1px solid #405275;
+    border: 1px solid #312581;
     border-radius: 15px 25px 10px 15px;
     }
 .column:nth-child(even){
