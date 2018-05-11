@@ -82,7 +82,7 @@ p{
     background: #33cccc;
     transform: translateY(3px);
     }
-#yourWins, #yourLoses, #winOrLose{
+#yourWins, #yourLoses, #winOrLose, #yourNum{
     font-size: 32px;
     color: #E30B5C;
 }
