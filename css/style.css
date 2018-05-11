@@ -82,7 +82,7 @@ p{
     background: #33cccc;
     transform: translateY(3px);
     }
-#yourWins, #yourLoses, #winOrLose, #yourNum{
+#yourWins, #yourLoses, {
     font-size: 32px;
     color: #E30B5C;
 }
@@ -91,7 +91,7 @@ p{
     font-size: 28px;
 }
 
-#yourTotal {
+#yourTotal, #yourNum, #winOrLose {
     font-size: 36px;
     color: #E30B5C;
 }

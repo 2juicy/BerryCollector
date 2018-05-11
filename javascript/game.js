@@ -12,7 +12,7 @@ var random3 = (Math.floor(Math.random() * 12) +1);
 var userPick = 0;
 randomArr.push(random0, random1, random2, random3);
 console.log(randomArr);
-document.getElementById("yourNum").innerHTML = "#: " + randomNum;
+document.getElementById("yourNum").innerHTML = randomNum;
 
 //Reset game and randomize number.
 function randomizeNum(){
@@ -24,7 +24,7 @@ function randomizeNum(){
     random3 = (Math.floor(Math.random() * 12) +1);
     randomArr.push(random0, random1, random2, random3);
     console.log(randomArr);
-    document.getElementById("yourNum").innerHTML = "#: " + randomNum;
+    document.getElementById("yourNum").innerHTML = randomNum;
     totalScore = 0;
 }
 //Checks score for win condition.
