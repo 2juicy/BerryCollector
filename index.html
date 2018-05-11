@@ -5,9 +5,9 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<title>Crystal Collector!</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+	<title>Crystal Collector!</title>
 <!--  -->
 </head>
 <!--  -->
@@ -16,25 +16,25 @@
 		<div>
 			<h1>CrystalsCollector!</h1>
 		</div>
-		<div>
+		<div class="column">
 			<p>You will be given a random # at the start of the game.</p>
 			<p>There are 4 crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
 			<p>You win the game by matching your total score to random #, you lose the game if your total score goes above the random #.</p>
 			<p>The value of each crystal in hidden from you until you click on it.</p>
 			<p>Each time when the game starts, the game will change the values of each crystal</p>
 		</div>
-		<div>
+		<div class="column">
 			<p><span id='yourWins'>Wins: 0</span></p>
 			<p><span id='yourLoses'>Loses: 0</span></p>
 		</div>
-		<div class="center">
-			<a id="item" value=1 href="#">Item 1</a>
-			<a id="item" value=2 href="#">Item 2</a>
-			<a id="item" value=3 href="#">Item 3</a>
-			<a id="item" value=4 href="#">Item 4</a>
+		<div class="column">
+			<button class='item' value='1'>Item 1</button>
+			<button class='item' value='2'>Item 2</button>
+			<button class='item' value='3'>Item 3</button>
+			<button class='item' value='4'>Item 4</button>
 		</div>
-		<div>
-			<p>Your total score is: </p>
+		<div class="column">
+			<p><span id=yourTotal>Your total score is: </span></p>
 		</div>
 	</div>
 

@@ -4,17 +4,30 @@ var loses = 0;
 var score = 0;
 var totalScore = 0;
 var randomNum = (Math.floor(Math.random() * 999));
-gameCheck = false;
+
 
 
 
 $(document).ready(function() {
 
-      $(".center").on("click", "#item", function() {
+    $(".container").on("click", ".item", function() {
+   		var userPick = $(this).val();
+        console.log(userPick);
 
-      	if (gameCheck !== true) {
-      		var yourPick = $(this).val();
-          	console.log("Your Pick: " + yourPick);
-      	}
 
-      })
+    
+
+
+
+
+
+
+    }); // End of .on(click) function
+
+
+
+
+
+
+
+}); // Document.ready ends here.

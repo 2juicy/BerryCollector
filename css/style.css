@@ -1,49 +1,96 @@
 *{
-		margin: 0;
-		padding: 0;
-	}
-	hr{
-    	display: block;
-    	height: 1px;
-    	border:0;
-    	border-top: 1px solid #ccc;
-    	margin: 1em 0 1em 0;
-    	padding: 0;
-	}
-	.container{
-    	max-width: 960px;
-    	overflow: auto;
-	}
-	.container > div{
-		float: left;
-    	width: 50%;
-    	box-sizing: border-box;
-    	padding: 20px;
-	}
-	#item{
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+	margin: 0;
+	padding: 0;
+    }
+hr{
+    display: block;
+    height: 1px;
+    border:0;
+    border-top: 1px solid #ccc; 
+    margin: 1em 0 1em 0;
+    padding: 0;
+    }
+h1{
+    color: #f99e1a;
+    font-size: 52px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: capitalize;
+    font-style: italic;
+    text-shadow: -1px -1px 1px #aaa,
+             0px 4px 1px rgba(0,0,0,0.5),
+             4px 4px 5px rgba(0,0,0,0.7),
+             0px 0px 7px rgba(0,0,0,0.4);
+    text-align: center;
+}
+p{
+    color: #218ffe;
+    font-size: 24px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: capitalize;
+    font-style: italic;
+    text-shadow: -1px -1px 1px #aaa,
+             0px 4px 1px rgba(0,0,0,0.5),
+             4px 4px 5px rgba(0,0,0,0.7),
+             0px 0px 7px rgba(0,0,0,0.4);
+}
+p:nth-child(even){
+    color: #f99e1a;
+}
+
+.container{
+    max-width: 960px;
+    overflow: auto;
+    }
+.column{
+	float: left;
+    width: 50%;
+    box-sizing: border-box;
+   	padding: 20px;
+    border: 5px solid #405275;
+    border-radius: 15px 25px 10px 15px;
+    }
+.item{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: capitalize;
+    font-style: italic;
     display: inline-block;
-    color: black;
+    color: #f99e1a;
+    margin: 0px 3px 0px 3px;
     padding-right: 20px;
-    box-shadow: 0px 3px 8px #5f2b1a;
+    box-shadow: 0px 3px 8px #43484c;
     font-size: 20px;
-    padding: 10px 20px;
-    margin-top: 1em;
+    padding: 20px 20px;
     border-radius: 5px;
     transition: background linear 0.33s;
-    background: linear-gradient(white, #33cccc);
+    background: linear-gradient(#218ffe, #405275);
     text-shadow: -1px -1px 1px #aaa,
              0px 4px 1px rgba(0,0,0,0.5),
              4px 4px 5px rgba(0,0,0,0.7),
              0px 0px 7px rgba(0,0,0,0.4);
     }
-    #item:hover{
+.item:hover{
     background: white;
     }
 
-    #item:active {
+.item:active {
     background: #33cccc;
     transform: translateY(3px);
     }
+#yourWins, #yourLoses{
+    font-size: 32px;
+}
+
+#yourTotal {
+    font-size: 36px;
+    color: #f99e1a;
+}
+
+@media (max-width: 960px){
+    .container{
+        width: auto;
+    }
+    .column{
+        float: none;
+        width: auto;
+    }
+}
