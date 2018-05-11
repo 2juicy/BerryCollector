@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<title>jQuery Game</title>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	hr{
+    	display: block;
+    	height: 1px;
+    	border:0;
+    	border-top: 1px solid #ccc;
+    	margin: 1em 0 1em 0;
+    	padding: 0;
+	}
+	.container{
+    	max-width: 960px;
+    	overflow: auto;
+	}
+	.container > div{
+		float: left;
+    	width: 50%;
+    	box-sizing: border-box;
+    	padding: 20px;
+	}
+	#item{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    color: black;
+    padding-right: 20px;
+    box-shadow: 0px 3px 8px #5f2b1a;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-top: 1em;
+    border-radius: 5px;
+    transition: background linear 0.33s;
+    background: linear-gradient(white, #33cccc);
+    text-shadow: -1px -1px 1px #aaa,
+             0px 4px 1px rgba(0,0,0,0.5),
+             4px 4px 5px rgba(0,0,0,0.7),
+             0px 0px 7px rgba(0,0,0,0.4);
+}
+
+#item:hover{
+    background: white;
+}
+
+#item:active {
+    background: #33cccc;
+    transform: translateY(3px);
+  }
+</style>
+<!--  -->
+</head>
+<!--  -->
+<body>
+	<div class="container">
+		<div>
+			<h1>CrystalsCollector!</h1>
+		</div>
+		<div>
+			<p>You will be given a random # at the start of the game.</p>
+			<p>There are 4 crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+			<p>You win the game by matching your total score to random #, you lose the game if your total score goes above the random #.</p>
+			<p>The value of each crystal in hidden from you until you click on it.</p>
+			<p>Each time when the game starts, the game will change the values of each crystal</p>
+		</div>
+		<div>
+			<p><span id='yourWins'>Wins: 0</span></p>
+			<p><span id='yourLoses'>Loses: 0</span></p>
+		</div>
+		<div class="center">
+			<a id="item" value=1 href="#">Item 1</a>
+			<a id="item" value=2 href="#">Item 2</a>
+			<a id="item" value=3 href="#">Item 3</a>
+			<a id="item" value=4 href="#">Item 4</a>
+		</div>
+		<div>
+			<p>Your total score is: </p>
+		</div>
+	</div>
+
+
+<script type="text/javascript">
+//global variables
+var wins = 0;
+var loses = 0;
+var score = 0;
+var totalScore = 0;
+var randomNum = (Math.floor(Math.random() * 999));
+
+</script>
+
+</body>
+</html>
