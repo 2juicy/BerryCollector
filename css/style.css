@@ -54,7 +54,7 @@ p{
 .column > button:nth-child(even){
     color: #fc5a8d;
 }
-#strawberry{
+.strawberry{
     color: #fc5a8d;
 }
 .item{
@@ -106,7 +106,7 @@ figure{
     width: 100%;
     margin: 0;
     padding: 0;
-    position: absolute;
+    position: fixed;
     overflow: hidden;
 }
 
