@@ -1,6 +1,7 @@
 var wins = 0;
 var loses = 0;
 var totalScore = 0;
+var userPick;
 var randomNum = ((Math.floor(Math.random() * 101) +19));
 randomArr = new Array;
 for (let i = 0; i < 4; i++){
@@ -31,7 +32,7 @@ function scoreTrack(){
     }
 }
 $(".container").on("click", ".item", function() {
-	var userPick = $(this).val();
+	userPick = $(this).val();
     scoreTrack();
     document.getElementById("yourWins").innerHTML = 'Wins: ' + wins;
     document.getElementById("yourLoses").innerHTML = 'Loses: ' + loses;
