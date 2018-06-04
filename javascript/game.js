@@ -31,7 +31,7 @@ function scoreTrack(){
     }
 }
 $(".container").on("click", ".item", function() {
-	let userPick = $(this).val();
+	var userPick = $(this).val();
     scoreTrack();
     document.getElementById("yourWins").innerHTML = 'Wins: ' + wins;
     document.getElementById("yourLoses").innerHTML = 'Loses: ' + loses;
