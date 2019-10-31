@@ -1,6 +1,13 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #e30b5c;
+  text-transform: capitalize;
+  font-style: italic;
+  text-align: center;
+  text-shadow: -1px -1px 1px #aaa, 0px 4px 1px rgba(0, 0, 0, 0.5),
+    4px 4px 5px rgba(0, 0, 0, 0.7), 0px 0px 7px rgba(0, 0, 0, 0.4);
 }
 body {
   background: url("../images/background.jpg");
@@ -16,65 +23,45 @@ hr {
   padding: 0;
 }
 h1 {
-  color: #e30b5c;
   font-size: 52px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  text-transform: capitalize;
-  font-style: italic;
-  text-shadow: -1px -1px 1px #aaa, 0px 4px 1px rgba(0, 0, 0, 0.5),
-    4px 4px 5px rgba(0, 0, 0, 0.7), 0px 0px 7px rgba(0, 0, 0, 0.4);
-  text-align: center;
 }
 p {
-  color: #e30b5c;
   font-size: 24px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  text-transform: capitalize;
-  font-style: italic;
-  text-shadow: -1px -1px 1px #aaa, 0px 4px 1px rgba(0, 0, 0, 0.5),
-    4px 4px 5px rgba(0, 0, 0, 0.7), 0px 0px 7px rgba(0, 0, 0, 0.4);
-  text-align: center;
 }
 .container {
   position: relative;
   margin: 10px;
-  text-align: center;
 }
 .column {
   float: left;
-  width: 50%;
+  width: 48%;
   box-sizing: border-box;
   padding: 20px;
-  margin: 15px 0px 15px 0px;
+  margin: 15px 5px 15px 5px;
   border: 1px solid #312581;
   border-radius: 15px 25px 10px 15px;
 }
 .column:nth-child(even) {
   border-radius: 25px 10px 15px 25px;
 }
-.column > button:nth-child(even) {
+.column > button:nth-child(even),
+.strawberry,
+#yourWins,
+#yourLoses,
+#score {
   color: #fc5a8d;
 }
-.strawberry {
-  color: #fc5a8d;
-}
-
 .item {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-transform: capitalize;
   font-style: italic;
   display: inline-block;
-  color: #e30b5c;
   margin: 0px 2px 0px 2px;
-  padding-right: 20px;
   box-shadow: 0px 3px 8px #43484c;
   font-size: 20px;
-  padding: 20px 20px;
+  padding: 20px;
   border-radius: 15px 5px 15px 5px;
   transition: background linear 0.33s;
   background: linear-gradient(#218ffe, #405275);
-  text-shadow: -1px -1px 1px #aaa, 0px 4px 1px rgba(0, 0, 0, 0.5),
-    4px 4px 5px rgba(0, 0, 0, 0.7), 0px 0px 7px rgba(0, 0, 0, 0.4);
 }
 .item:nth-child(even) {
   border-radius: 5px 15px 5px 15px;
@@ -82,36 +69,31 @@ p {
 .item:hover {
   background: white;
 }
-
 .item:active {
   background: #33cccc;
   transform: translateY(3px);
 }
-
-#yourWins,
-#yourLoses {
+.winloss > p {
   font-size: 32px;
-  color: #e30b5c;
 }
-
 #score {
   font-size: 28px;
-  color: #fc5a8d;
 }
-
 #yourTotal,
 #yourNum,
 #winOrLose {
   font-size: 36px;
-  color: #e30b5c;
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1023px) {
   .container {
     width: auto;
   }
   .column {
     float: none;
     width: auto;
+  }
+  .item {
+    padding: 15px;
   }
 }

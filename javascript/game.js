@@ -4,13 +4,6 @@ let totalScore = 0;
 let randomNum = Math.floor(Math.random() * 101) + 19;
 let randomArr = new Array();
 
-for (let i = 0; i < 4; i++) {
-  let random = Math.floor(Math.random() * 12) + 1;
-  randomArr.push(random);
-}
-
-document.getElementById("yourNum").innerHTML = randomNum;
-
 function randomizeNum() {
   randomNum = Math.floor(Math.random() * 101) + 19;
   randomArr = [];
@@ -18,30 +11,29 @@ function randomizeNum() {
     let random = Math.floor(Math.random() * 12) + 1;
     randomArr.push(random);
   }
-  document.getElementById("yourNum").innerHTML = randomNum;
+  document.getElementById("yourNum").textContent = randomNum;
   totalScore = 0;
 }
+randomizeNum();
 
 function scoreTrack(userPick) {
   totalScore = randomArr[userPick] + totalScore;
   if (totalScore > randomNum) {
     loses++;
     randomizeNum();
-    document.getElementById("winOrLose").innerHTML = "You Lose!";
+    document.getElementById("winOrLose").textContent = "You Lose";
   } else if (totalScore == randomNum) {
     wins++;
     randomizeNum();
-    document.getElementById("winOrLose").innerHTML = "You Win!";
+    document.getElementById("winOrLose").textContent = "You Win";
   }
 }
 
-const buttons = document.querySelectorAll(".item");
-
-buttons.forEach(button =>
+document.querySelectorAll(".item").forEach(button =>
   button.addEventListener("click", function() {
     scoreTrack(this.value);
-    document.getElementById("yourWins").innerHTML = "Wins: " + wins;
-    document.getElementById("yourLoses").innerHTML = "Loses: " + loses;
-    document.getElementById("yourTotal").innerHTML = totalScore;
+    document.getElementById("yourWins").textContent = wins;
+    document.getElementById("yourLoses").textContent = loses;
+    document.getElementById("yourTotal").textContent = totalScore;
   })
 );
