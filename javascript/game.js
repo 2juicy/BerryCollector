@@ -1,40 +1,47 @@
-var wins = 0;
-var loses = 0;
-var totalScore = 0;
-var userPick;
-var randomNum = ((Math.floor(Math.random() * 101) +19));
-randomArr = new Array;
-for (let i = 0; i < 4; i++){
-    let random = (Math.floor(Math.random() * 12) +1);
-    randomArr.push(random);
+let wins = 0;
+let loses = 0;
+let totalScore = 0;
+let randomNum = Math.floor(Math.random() * 101) + 19;
+let randomArr = new Array();
+
+for (let i = 0; i < 4; i++) {
+  let random = Math.floor(Math.random() * 12) + 1;
+  randomArr.push(random);
 }
+
 document.getElementById("yourNum").innerHTML = randomNum;
-function randomizeNum(){
-    randomNum = ((Math.floor(Math.random() * 101) + 19));
-    randomArr = [];
-    for (let i = 0; i < 4; i++){
-        let random = (Math.floor(Math.random() * 12) +1);
+
+function randomizeNum() {
+  randomNum = Math.floor(Math.random() * 101) + 19;
+  randomArr = [];
+  for (let i = 0; i < 4; i++) {
+    let random = Math.floor(Math.random() * 12) + 1;
     randomArr.push(random);
-    }
-    document.getElementById("yourNum").innerHTML = randomNum;
-    totalScore = 0;
+  }
+  document.getElementById("yourNum").innerHTML = randomNum;
+  totalScore = 0;
 }
-function scoreTrack(){
-    totalScore = (randomArr[userPick] + totalScore);
-    if (totalScore > randomNum){
-        loses++;
-        randomizeNum();  
-        $("#winOrLose").text('You Lose!');     
-    } else if (totalScore == randomNum){
-        wins++;
-        randomizeNum(); 
-        $("#winOrLose").text('You Win!');    
-    }
+
+function scoreTrack(userPick) {
+  totalScore = randomArr[userPick] + totalScore;
+  if (totalScore > randomNum) {
+    loses++;
+    randomizeNum();
+    document.getElementById("winOrLose").innerHTML = "You Lose!";
+  } else if (totalScore == randomNum) {
+    wins++;
+    randomizeNum();
+    document.getElementById("winOrLose").innerHTML = "You Win!";
+  }
 }
-$(".container").on("click", ".item", function() {
-	userPick = $(this).val();
-    scoreTrack();
-    document.getElementById("yourWins").innerHTML = 'Wins: ' + wins;
-    document.getElementById("yourLoses").innerHTML = 'Loses: ' + loses;
+
+const buttons = document.querySelectorAll(".item");
+
+buttons.forEach(button =>
+  button.addEventListener("click", function() {
+    scoreTrack(this.value);
+    document.getElementById("yourWins").innerHTML = "Wins: " + wins;
+    document.getElementById("yourLoses").innerHTML = "Loses: " + loses;
     document.getElementById("yourTotal").innerHTML = totalScore;
-});
+  })
+);

@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Berry Collector!</title>
+  </head>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <body>
+    <div class="container">
+      <h1>¡<span class="strawberry">BerryCollector</span>!</h1>
+      <hr />
+      <div class="column">
+        <p>You will be given a random # at the start of the game.</p>
+        <hr />
+        <p class="strawberry">
+          There are 4 berries. By clicking on an item you will add a specific
+          amount of points to your total score.
+        </p>
+        <hr />
+        <p>
+          You win the game by matching your total score to random #, you lose
+          the game if your total score goes above the random #.
+        </p>
+        <hr />
+        <p class="strawberry">Try to figure out the value of each berry!</p>
+        <hr />
+        <p>
+          Each time when the game starts, the game will change the values of
+          each berry
+        </p>
+      </div>
+      <div class="column">
+        <p><span id="yourWins">Wins: 0</span></p>
+        <p><span id="yourLoses">Loses: 0</span></p>
+      </div>
+      <p>
+        <span id="score">Your Total Score Is: </span><span id="yourNum"></span>
+      </p>
+      <div class="column">
+        <button class="item" value="0">Berry 1</button>
+        <button class="item" value="1">Berry 2</button>
+        <button class="item" value="2">Berry 3</button>
+        <button class="item" value="3">Berry 4</button>
+      </div>
+      <div class="column">
+        <p>
+          <span id="score">Your Total Score Is: </span
+          ><span id="yourTotal"></span>
+        </p>
+      </div>
+      <p><span id="winOrLose"></span></p>
+    </div>
 
-	<title>Berry Collector!</title>
-<!--  -->
-</head>
-<!--  -->
-<body>
-	<div class="container">	
-		<h1>¡<span class='strawberry'>BerryCollector</span>!</h1>
-<hr>
-		<div class="column">
-			<p>You will be given a random # at the start of the game.</p>
-<hr>
-			<p class="strawberry">There are 4 berries. By clicking on an item you will add a specific amount of points to your total score.</p>
-<hr>
-			<p>You win the game by matching your total score to random #, you lose the game if your total score goes above the random #.</p>
-<hr>
-			<p class='strawberry'>Try to figure out the value of each berry!</p>
-<hr>
-			<p>Each time when the game starts, the game will change the values of each berry</p>
-		</div>
-		<div class="column">
-			<p><span id='yourWins'>Wins: 0</span></p>
-			<p><span id='yourLoses'>Loses: 0</span></p>
-		</div>
-		<p><span id='score'>Your Total Score Is: </span><span id='yourNum'></span></p>	
-		<div class="column">
-			<button class='item' value='0'>Berry 1</button>
-			<button class='item' value='1'>Berry 2</button>
-			<button class='item' value='2'>Berry 3</button>
-			<button class='item' value='3'>Berry 4</button>
-		</div>
-		<div class="column">
-			<p><span id='score'>Your Total Score Is: </span><span id='yourTotal'></span></p>
-		</div>
-		<p><span id="winOrLose"></span></p>
-	</div>
-
-
-<script type="text/javascript" src='javascript/game.js'></script>
-</body>
+    <script type="text/javascript" src="javascript/game.js"></script>
+  </body>
 </html>
