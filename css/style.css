@@ -89,6 +89,10 @@ p {
 #winOrLose {
   font-size: 36px;
 }
+.clear {
+  width: 100%;
+  clear: both;
+}
 
 @media only screen and (max-width: 1023px) {
   .container {
