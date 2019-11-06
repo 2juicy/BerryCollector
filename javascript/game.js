@@ -3,8 +3,11 @@ let loses = 0;
 let totalScore = 0;
 let randomNum = Math.floor(Math.random() * 101) + 19;
 let randomArr = new Array();
+let delay;
 
 function randomizeNum() {
+  document.querySelector(".blink").style.visibility = "visible";
+  clearTimeout(delay);
   randomNum = Math.floor(Math.random() * 101) + 19;
   randomArr = [];
   for (let i = 0; i < 4; i++) {
@@ -13,6 +16,9 @@ function randomizeNum() {
   }
   document.getElementById("yourNum").textContent = randomNum;
   totalScore = 0;
+  delay = setTimeout(() => {
+    document.querySelector(".blink").style.visibility = "hidden";
+  }, 5000);
 }
 randomizeNum();
 

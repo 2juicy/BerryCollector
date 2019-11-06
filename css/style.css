@@ -85,13 +85,26 @@ p {
   font-size: 28px;
 }
 #yourTotal,
-#yourNum,
-#winOrLose {
+#yourNum {
   font-size: 36px;
+}
+#winOrLose {
+  font-size: 52px;
 }
 .clear {
   width: 100%;
   clear: both;
+}
+
+.blink {
+  visibility: hidden;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
